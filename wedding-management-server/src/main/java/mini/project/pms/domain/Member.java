@@ -4,6 +4,7 @@ import java.sql.Date;
 
 public class Member {
 	private String id;
+	private String password;
 	private String name;
 	private int gender;
 	private int age;
@@ -11,7 +12,6 @@ public class Member {
 	private String hobby;
 	private int personal;
 	private String mbti;
-	private String password;
 
 	public String getPassword() {
     return password;
