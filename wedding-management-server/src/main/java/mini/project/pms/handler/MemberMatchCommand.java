@@ -51,14 +51,16 @@ public class MemberMatchCommand implements Command {
       while (iterator.hasNext()) {
         Member member = iterator.next();
         if (member.getGender() != genderNo && member.getPersonal() == personalNo) {
-          out.println("---------------------------");
+          out.println("-----------------------------------");
           out.printf("<< %s 회원님 >>\n"
-              + "나이 : %d\n"
+              + "나이 : %d세\n"
               + "%s 를(을) 즐기는 회원\n",
               member.getName(),
               member.getAge(),
               member.getHobby());
-          out.println("---------------------------");
+          out.println("-----------------------------------");
+
+          out.printf("♥ %s님의 연락처가 궁금하신가요?\n♥ 프리미엄 서비스에 가입하세요!\n", member.getName());
         } else {
           continue;
         }
