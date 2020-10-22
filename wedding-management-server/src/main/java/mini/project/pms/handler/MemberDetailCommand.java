@@ -39,14 +39,14 @@ public class MemberDetailCommand implements Command {
         default:
           genderLabel = "성별 정보 없음";
       }
-      out.printf("성별: %s\n", genderLabel);
+      out.printf("● 성별: %s\n", genderLabel);
 
-      out.printf("나이: %s\n", member.getAge());
-      out.printf("취미: %s\n", member.getHobby());
-      out.printf("MBTI: %s\n", member.getMbti());
-      out.printf("등록일: %s\n", member.getRegisteredDate());
+      out.printf("● 나이: %s\n", member.getAge());
+      out.printf("● 취미: %s\n", member.getHobby());
+      out.printf("● MBTI: %s\n", member.getMbti());
+      out.printf("● 등록일: %s\n", member.getRegisteredDate());
       out.printf(" ");
-      out.printf("%s님의 연락처를 알고 싶으시면 프리미엄 서비스에 가입하세요!\n", member.getName());
+      out.printf("♥ %s님의 ☎연락처☎가 궁금하신가요?\n♥ 프리미엄 서비스에 가입하세요!\n", member.getName());
       out.printf(" ");
 
     } catch (Exception e) {
