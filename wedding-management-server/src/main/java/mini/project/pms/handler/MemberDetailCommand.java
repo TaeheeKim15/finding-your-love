@@ -40,7 +40,7 @@ public class MemberDetailCommand implements Command {
           genderLabel = "성별 정보 없음";
       }
       out.printf("성별: %s\n", genderLabel);
-      out.printf("나이: %s\n", member.getAge());
+      out.printf("나이: %s세\n", member.getAge());
       out.printf("취미: %s\n", member.getHobby());
       out.printf("성격: %s 성격\n", personalBoard(member.getPersonal()));
 
