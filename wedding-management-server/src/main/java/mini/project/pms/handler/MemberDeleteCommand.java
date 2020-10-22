@@ -16,7 +16,8 @@ public class MemberDeleteCommand implements Command {
   @Override
   public void execute(PrintWriter out, BufferedReader in) {
     try {
-      out.println("[회원 삭제]");
+      out.println("[회원 탈퇴]");
+
       String id = Prompt.inputString("아이디를 입력해주세요 : ", out, in);
       Member member = findById(id);
 

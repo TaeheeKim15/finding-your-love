@@ -23,6 +23,7 @@ public class MemberAddCommand implements Command {
 
       Member member = new Member();
       out.println("★ 입력하신 정보는 변경할 수 없습니다.\n★ 신중하게 입력하시길 바랍니다.");
+
       member.setId(Prompt.inputString("아이디? ", out, in));
       member.setPassword(Prompt.inputString("비밀번호? ", out, in));
       member.setName(Prompt.inputString("이름? ", out, in));
@@ -65,5 +66,15 @@ public class MemberAddCommand implements Command {
     } catch (Exception e) {
       out.printf("작업 처리 중 오류 발생! - %s\n", e.getMessage());
     }
+  }
+
+  private Member findById(String id) {
+    for (int i = 0; i < memberList.size(); i++) {
+      Member member = memberList.get(i);
+      if (member.getId() == id) {
+        return member;
+      }
+    }
+    return null;
   }
 }
