@@ -1,35 +1,20 @@
-
+package mini.project.pms.listener;
 
 import java.util.List;
 import java.util.Map;
-
-import com.eomcs.pms.domain.Board;
-import com.eomcs.pms.domain.Project;
-import com.eomcs.pms.handler.ProjectAddCommand;
-import com.eomcs.pms.handler.ProjectDeleteCommand;
-import com.eomcs.pms.handler.ProjectDetailCommand;
-import com.eomcs.pms.handler.ProjectListCommand;
-import com.eomcs.pms.handler.ProjectUpdateCommand;
-import com.eomcs.pms.handler.TaskAddCommand;
-import com.eomcs.pms.handler.TaskDeleteCommand;
-import com.eomcs.pms.handler.TaskDetailCommand;
-import com.eomcs.pms.handler.TaskListCommand;
-import com.eomcs.pms.handler.TaskUpdateCommand;
-
-import jdk.internal.jline.internal.ShutdownHooks.Task;
 import mini.project.context.ApplicationContextListener;
+import mini.project.pms.domain.Board;
+import mini.project.pms.domain.Member;
 import mini.project.pms.handler.BoardAddCommand;
 import mini.project.pms.handler.BoardDeleteCommand;
 import mini.project.pms.handler.BoardDetailCommand;
 import mini.project.pms.handler.BoardListCommand;
 import mini.project.pms.handler.BoardUpdateCommand;
-import mini.project.pms.handler.CalculatorCommand;
 import mini.project.pms.handler.HelloCommand;
 import mini.project.pms.handler.MemberAddCommand;
 import mini.project.pms.handler.MemberDeleteCommand;
 import mini.project.pms.handler.MemberDetailCommand;
 import mini.project.pms.handler.MemberListCommand;
-import mini.project.pms.handler.MemberUpdateCommand;
 
 // 클라이언트 요청을 처리할 커맨드 객체를 준비한다.
 public class RequestMappingListener implements ApplicationContextListener {
@@ -40,8 +25,6 @@ public class RequestMappingListener implements ApplicationContextListener {
 		// 옵저버가 작업한 결과를 맵에서 꺼낸다.
 		List<Board> boardList = (List<Board>) context.get("boardList");
 		List<Member> memberList = (List<Member>) context.get("memberList");
-		List<Project> projectList = (List<Project>) context.get("projectList");
-		List<Task> taskList = (List<Task>) context.get("taskList");
 
 		context.put("/board/add", new BoardAddCommand(boardList));
 		context.put("/board/list", new BoardListCommand(boardList));
@@ -53,24 +36,9 @@ public class RequestMappingListener implements ApplicationContextListener {
 		context.put("/member/add", new MemberAddCommand(memberList));
 		context.put("/member/list", memberListCommand);
 		context.put("/member/detail", new MemberDetailCommand(memberList));
-		context.put("/member/update", new MemberUpdateCommand(memberList));
 		context.put("/member/delete", new MemberDeleteCommand(memberList));
 
-		context.put("/project/add", new ProjectAddCommand(projectList, memberListCommand));
-		context.put("/project/list", new ProjectListCommand(projectList));
-		context.put("/project/detail", new ProjectDetailCommand(projectList));
-		context.put("/project/update", new ProjectUpdateCommand(projectList, memberListCommand));
-		context.put("/project/delete", new ProjectDeleteCommand(projectList));
-
-		context.put("/task/add", new TaskAddCommand(taskList, memberListCommand));
-		context.put("/task/list", new TaskListCommand(taskList));
-		context.put("/task/detail", new TaskDetailCommand(taskList));
-		context.put("/task/update", new TaskUpdateCommand(taskList, memberListCommand));
-		context.put("/task/delete", new TaskDeleteCommand(taskList));
-
 		context.put("/hello", new HelloCommand());
-
-		context.put("/calc", new CalculatorCommand());
 	}
 
 	@Override

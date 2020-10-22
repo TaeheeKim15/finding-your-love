@@ -28,11 +28,7 @@ public class MemberUpdateCommand implements Command {
 
       String name = Prompt.inputString(
           String.format("이름(%s)? ", member.getName()), out, in);
-      String email = Prompt.inputString(
-          String.format("이메일(%s)? ", member.getEmail()), out, in);
-      String password = Prompt.inputString("암호? ", out, in);
-      String photo = Prompt.inputString(
-          String.format("사진(%s)? ", member.getPhoto()), out, in);
+
       String tel = Prompt.inputString(
           String.format("전화(%s)? ", member.getTel()), out, in);
 
@@ -43,9 +39,6 @@ public class MemberUpdateCommand implements Command {
       }
 
       member.setName(name);
-      member.setEmail(email);
-      member.setPassword(password);
-      member.setPhoto(photo);
       member.setTel(tel);
 
       out.println("회원을 변경하였습니다.");

@@ -1,11 +1,11 @@
-package mini.project.handler;
+package mini.project.pms.handler;
 
 import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.sql.Date;
 import java.util.List;
-import com.eomcs.pms.domain.Board;
-import com.eomcs.util.Prompt;
+import mini.project.pms.domain.Board;
+import mini.project.util.Prompt;
 
 // Command 규칙에 따라 클래스를 정의한다.
 public class BoardAddCommand implements Command {

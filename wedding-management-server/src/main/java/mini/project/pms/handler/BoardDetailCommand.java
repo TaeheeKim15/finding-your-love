@@ -1,10 +1,10 @@
-package mini.project.handler;
+package mini.project.pms.handler;
 
 import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.util.List;
-import com.eomcs.pms.domain.Board;
-import com.eomcs.util.Prompt;
+import mini.project.pms.domain.Board;
+import mini.project.util.Prompt;
 
 public class BoardDetailCommand implements Command {
 
