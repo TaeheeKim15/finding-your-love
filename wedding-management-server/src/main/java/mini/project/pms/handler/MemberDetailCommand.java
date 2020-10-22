@@ -26,8 +26,8 @@ public class MemberDetailCommand implements Command {
         return;
       }
 
-      out.printf("%님의 정보는 아래와 같습니다.\n", member.getName());
-      out.printf("성별: %s\n", member.getGender());
+      out.printf("%s님의 정보는 아래와 같습니다.\n", member.getName());
+
       String genderLabel = null;
       switch (member.getGender()) {
         case 1:
@@ -39,6 +39,8 @@ public class MemberDetailCommand implements Command {
         default:
           genderLabel = "성별 정보 없음";
       }
+      out.printf("성별: %s\n", genderLabel);
+
       out.printf("나이: %s\n", member.getAge());
       out.printf("취미: %s\n", member.getHobby());
       out.printf("MBTI: %s\n", member.getMbti());
