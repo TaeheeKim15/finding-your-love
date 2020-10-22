@@ -106,8 +106,8 @@ public class ClientApp {
       case 3: command ="/member/detail"; break;
       case 4: command ="/member/delete"; break;
       case 5: command ="/femaleMember/list"; break;
-      case 7: command ="/maleMember/list"; break;
-      case 8: command ="/member/match"; break;
+      case 6: command ="/maleMember/list"; break;
+      case 7: command ="/member/match"; break;
     }
     return command;
   }
