@@ -23,7 +23,19 @@ public class MemberAddCommand implements Command {
       Member member = new Member();
       member.setId(Prompt.inputString("아이디? ", out, in));
       member.setName(Prompt.inputString("이름? ", out, in));
-      member.setGender(Prompt.inputInt("성별?\n1: 여자\n2: 남자\n>", out, in));
+
+      int no = 0;
+      while (true) {
+        no = Prompt.inputInt("성별?\n1: 여자\n2: 남자\n>", out, in);
+        if (no == 1 || no == 2) {
+          member.setGender(no);
+          break;
+        } else {
+          out.println("다시 입력해주세요!");
+        }
+      }
+
+      //member.setGender(Prompt.inputInt("성별?\n1: 여자\n2: 남자\n>", out, in));
       member.setAge(Prompt.inputInt("나이? ", out, in));
       member.setTel(Prompt.inputString("전화번호? ", out, in));
       member.setHobby(Prompt.inputString("취미? ", out, in));
