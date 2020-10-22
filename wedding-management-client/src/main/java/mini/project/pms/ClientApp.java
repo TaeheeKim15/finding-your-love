@@ -34,8 +34,8 @@ public class ClientApp {
           + "----------------------------------\n"
           + "(1) 회원 등록 (2) 회원 목록 보기 \n"
           + "(3) 회원 상세 보기 (4) 회원 탈퇴  \n"
-          + "(4) 여성회원 조회 (5) 남성회원 조회 \n"
-          + "(6) 회원 매칭 (0) 나가기\n"
+          + "(5) 여성회원 조회 (6) 남성회원 조회 \n"
+          + "(7) 회원 매칭 (0) 나가기\n"
           + "----------------------------------\n");
       String input = commandBoard(Prompt.inputInt("명령> "));
       if (input.equalsIgnoreCase("quit"))
@@ -100,14 +100,14 @@ public class ClientApp {
   private static String commandBoard(int num) {
     String command = null;
     switch(num) {
-      case 0: return command = "quit";
-      case 1: return command = "/member/add";
-      case 2: return command = "/member/list";
-      case 3: return command ="/member/detail";
-      case 4: return command ="/member/delete";
-      case 5: return command ="/femaleMember/list";
-      case 7: return command ="/maleMember/list";
-      case 8: return command ="/member/match";
+      case 0: command = "quit"; break;
+      case 1: command = "/member/add"; break;
+      case 2: command = "/member/list"; break;
+      case 3: command ="/member/detail"; break;
+      case 4: command ="/member/delete"; break;
+      case 5: command ="/femaleMember/list"; break;
+      case 7: command ="/maleMember/list"; break;
+      case 8: command ="/member/match"; break;
     }
     return command;
   }
