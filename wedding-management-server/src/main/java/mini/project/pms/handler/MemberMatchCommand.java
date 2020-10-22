@@ -49,7 +49,7 @@ public class MemberMatchCommand implements Command {
 
       while (iterator.hasNext()) {
         Member member = iterator.next();
-        if (member.getGender() != genderNo) {
+        if (member.getGender() != genderNo && member.getPersonal() == personalNo) {
           out.printf("%s, %d, %s\n",
               member.getName(),
               member.getAge(),
