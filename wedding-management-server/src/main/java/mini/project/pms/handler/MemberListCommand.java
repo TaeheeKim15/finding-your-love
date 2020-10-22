@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.util.Iterator;
 import java.util.List;
+import mini.project.pms.domain.Member;
 
 public class MemberListCommand implements Command {
 
