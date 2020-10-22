@@ -22,15 +22,15 @@ public class MemberUpdateCommand implements Command {
       Member member = findById(id);
 
       if (member == null) {
-        out.println("해당 회원이 없습니다.");
+        out.println("해당 아이디로 등록된 회원이 없습니다.");
         return;
       }
 
       String name = Prompt.inputString(
-          String.format("이름(%s)? ", member.getName()), out, in);
+          String.format("● 이름(%s)? ", member.getName()), out, in);
 
       String tel = Prompt.inputString(
-          String.format("전화(%s)? ", member.getTel()), out, in);
+          String.format("● 전화(%s)? ", member.getTel()), out, in);
 
       String response = Prompt.inputString("정말 변경하시겠습니까?(y/N) ", out, in);
       if (!response.equalsIgnoreCase("y")) {
