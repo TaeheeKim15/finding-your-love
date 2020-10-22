@@ -30,7 +30,7 @@ public class MaleListCommand implements Command {
             member.getAge(),
             member.getHobby());
       } else {
-        break;
+        continue;
       }
     }
   }
