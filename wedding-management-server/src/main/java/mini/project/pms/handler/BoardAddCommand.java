@@ -7,7 +7,6 @@ import java.util.List;
 import mini.project.pms.domain.Board;
 import mini.project.util.Prompt;
 
-// Command 규칙에 따라 클래스를 정의한다.
 public class BoardAddCommand implements Command {
 
   List<Board> boardList;
@@ -22,10 +21,11 @@ public class BoardAddCommand implements Command {
       out.println("[게시물 등록]");
 
       Board board = new Board();
-      board.setNo(Prompt.inputInt("번호? ", out, in));
+      board.setNo(System.currentTimeMillis());
       board.setTitle(Prompt.inputString("제목? ", out, in));
       board.setContent(Prompt.inputString("내용? ", out, in));
       board.setWriter(Prompt.inputString("작성자? ", out, in));
+      board.setPassword(Prompt.inputString("비밀번호? ", out, in));
       board.setRegisteredDate(new Date(System.currentTimeMillis()));
       board.setViewCount(0);
 

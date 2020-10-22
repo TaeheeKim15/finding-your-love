@@ -11,7 +11,15 @@ public class Member {
 	private String hobby;
 	private int personal;
 	private String mbti;
-	private Date registeredDate;
+	private String password;
+
+	public String getPassword() {
+    return password;
+  }
+  public void setPassword(String password) {
+    this.password = password;
+  }
+  private Date registeredDate;
 
 	public String getId() {
 		return id;

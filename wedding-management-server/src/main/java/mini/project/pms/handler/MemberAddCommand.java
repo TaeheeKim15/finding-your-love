@@ -35,12 +35,12 @@ public class MemberAddCommand implements Command {
         }
       }
 
-      //member.setGender(Prompt.inputInt("성별?\n1: 여자\n2: 남자\n>", out, in));
       member.setAge(Prompt.inputInt("나이? ", out, in));
       member.setTel(Prompt.inputString("전화번호? ", out, in));
       member.setHobby(Prompt.inputString("취미? ", out, in));
       member.setPersonal(Prompt.inputInt("성격? ", out, in));
       member.setMbti(Prompt.inputString("MBTI? ", out, in));
+      member.setPassword(Prompt.inputString("비밀번호? ", out, in));
       member.setRegisteredDate(new Date(System.currentTimeMillis()));
 
       memberList.add(member);
