@@ -46,16 +46,24 @@ public class MemberMatchCommand implements Command {
           out.println("다시 입력해주세요!");
         }
       }
+
+      out.printf("%s 이성분들은 아래와 같습니다.\n",personalBoard(personalNo));
       int count = 0;
       while (iterator.hasNext()) {
         Member member = iterator.next();
         if (member.getGender() != genderNo && member.getPersonal() == personalNo) {
           ++count;
-          out.printf("%d번 회원님 : %s, %d, %s\n", 
+          out.printf("<< %d번 회원님 >>\n"
+              + "이름 : %s\n"
+              + "나이 : %d\n"
+              + "MBTI : %s\n"
+              + "%s 를(을) 즐기는 회원\n",
               count,
               member.getName(),
               member.getAge(),
+              member.getMbti(),
               member.getHobby());
+          out.println("---------------");
         } else {
           continue;
         }
@@ -65,6 +73,22 @@ public class MemberMatchCommand implements Command {
       out.printf("작업 처리 중 오류 발생! - %s\n", e.getMessage());
     }
 
+  }
+
+  private String personalBoard(int personalNo) {
+    String a = null;
+    switch(personalNo) {
+      case 1: return a = "다정한"; 
+      case 2: return a ="자신감 넘치는";
+      case 3: return a ="성실한"; 
+      case 4: return a ="꼼꼼한";
+      case 5: return a ="외향적인"; 
+      case 6: return a ="내성적인";
+      case 7: return a ="자상한";
+      case 8: return a ="끈기있는";
+      case 9: return a ="낙천적인";
+    }
+    return a;
   }
 
 }
