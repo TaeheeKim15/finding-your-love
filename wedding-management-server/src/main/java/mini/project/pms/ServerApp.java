@@ -3,12 +3,12 @@
  */
 package mini.project.pms;
 
-public class App {
-    public String getGreeting() {
-        return "Hello world.";
-    }
+public class ServerApp {
+	public String getGreeting() {
+		return "Hello world.";
+	}
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
+	public static void main(String[] args) {
+		System.out.println(new ServerApp().getGreeting());
+	}
 }
