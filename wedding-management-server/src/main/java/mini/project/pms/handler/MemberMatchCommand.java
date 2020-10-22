@@ -55,7 +55,7 @@ public class MemberMatchCommand implements Command {
               member.getAge(),
               member.getHobby());
         } else {
-          continue;                
+          continue;
         }
       }
 
