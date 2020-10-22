@@ -3,8 +3,8 @@ package mini.project.handler;
 import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.util.List;
-import com.eomcs.pms.domain.Member;
-import com.eomcs.util.Prompt;
+import mini.project.pms.domain.Member;
+import mini.project.util.Prompt;
 
 public class MemberAddCommand implements Command {
 
@@ -20,13 +20,14 @@ public class MemberAddCommand implements Command {
       out.println("[회원 등록]");
 
       Member member = new Member();
-      member.setNo(Prompt.inputInt("번호? ", out, in));
+      member.setId(Prompt.inputString("아이디? ", out, in));
       member.setName(Prompt.inputString("이름? ", out, in));
-      member.setEmail(Prompt.inputString("이메일? ", out, in));
-      member.setPassword(Prompt.inputString("암호? ", out, in));
-      member.setPhoto(Prompt.inputString("사진? ", out, in));
-      member.setTel(Prompt.inputString("전화? ", out, in));
-      member.setRegisteredDate(new java.sql.Date(System.currentTimeMillis()));
+      member.setGender(Prompt.inputInt("성별?(1: 여자/ 2: 남) ", out, in));
+      member.setAge(Prompt.inputInt("나이? ", out, in));
+      member.setTel(Prompt.inputString("전화번호? ", out, in));
+      member.setHobby(Prompt.inputString("취미? ", out, in));
+      member.setPersonal(Prompt.inputInt("성격? ", out, in));
+      member.setMbti(Prompt.inputString("MBTI? ", out, in));
 
       memberList.add(member);
 

@@ -9,7 +9,7 @@ public class Member {
 	private int age;
 	private String tel;
 	private String hobby;
-	private String personal;
+	private int personal;
 	private String mbti;
 
 	public String getId() {
@@ -48,10 +48,10 @@ public class Member {
 	public void setHobby(String hobby) {
 		this.hobby = hobby;
 	}
-	public String getPersonal() {
+	public int getPersonal() {
 		return personal;
 	}
-	public void setPersonal(String personal) {
+	public void setPersonal(int personal) {
 		this.personal = personal;
 	}
 	public String getMbti() {
