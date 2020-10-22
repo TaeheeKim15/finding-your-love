@@ -59,7 +59,7 @@ public class MemberAddCommand implements Command {
       int personalNo = 0;
       while (true) {
         personalNo = Prompt.inputInt("● 회원님의 성격 유형을 입력해주세요. (택 1)\n"
-            + "(1) 다정한 (2) 자신감 넘치는 (3)성실한\n"
+            + "(1) 다정한 (2) 자신감 넘치는 (3) 성실한\n"
             + "(4) 꼼꼼한 (5) 외향적인 (6) 내성적인\n"
             + "(7) 자상한 (8) 끈기있는 (9) 낙천적인\n> ", out, in);
         if (personalNo >= 0 && personalNo < 10) {

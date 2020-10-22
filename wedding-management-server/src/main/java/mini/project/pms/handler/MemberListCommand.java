@@ -16,13 +16,13 @@ public class MemberListCommand implements Command {
 
   @Override
   public void execute(PrintWriter out, BufferedReader in) {
-    out.println("[회원 목록]");
+    out.println("[전체 회원 목록]");
 
     Iterator<Member> iterator = memberList.iterator();
 
     while (iterator.hasNext()) {
       Member member = iterator.next();
-      out.printf("%s(%d세), %s을/를 즐깁니다.\n\n",
+      out.printf("%s(%d세), %s을/를 즐깁니다.\n",
           member.getName(),
           member.getAge(),
           member.getHobby());

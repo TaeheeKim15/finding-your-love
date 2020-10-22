@@ -35,9 +35,10 @@ public class ClientApp {
           + "(1) 회원 등록 (2) 회원 목록 보기 \n"
           + "(3) 회원 상세 보기 (4) 회원 탈퇴  \n"
           + "(5) 여성회원 조회 (6) 남성회원 조회 \n"
-          + "(7) 회원 매칭 (0) 나가기\n"
+          + "(7) 회원 매칭 (0) 나가기 (99) 종료\n"
           + "----------------------------------\n");
       String input = commandBoard(Prompt.inputInt("명령> "));
+
       if (input.equalsIgnoreCase("quit"))
         break;
 
@@ -47,7 +48,6 @@ public class ClientApp {
         break;
     }
     System.out.println("안녕!");
-
 
   }
 
@@ -103,11 +103,13 @@ public class ClientApp {
       case 0: command = "quit"; break;
       case 1: command = "/member/add"; break;
       case 2: command = "/member/list"; break;
-      case 3: command ="/member/detail"; break;
-      case 4: command ="/member/delete"; break;
-      case 5: command ="/femaleMember/list"; break;
-      case 6: command ="/maleMember/list"; break;
-      case 7: command ="/member/match"; break;
+      case 3: command = "/member/detail"; break;
+      case 4: command = "/member/delete"; break;
+      case 5: command = "/femaleMember/list"; break;
+      case 6: command = "/maleMember/list"; break;
+      case 7: command = "/member/match"; break;
+      case 99: command = "stop"; break;
+      default: command = "  "; break;
     }
     return command;
   }

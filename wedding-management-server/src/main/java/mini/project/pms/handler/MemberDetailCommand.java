@@ -26,7 +26,7 @@ public class MemberDetailCommand implements Command {
         return;
       }
 
-      out.printf("%s님의 정보는 아래와 같습니다.\n", member.getName());
+      out.printf("♥ %s님의 정보는 아래와 같습니다.\n", member.getName());
 
       String genderLabel = null;
       switch (member.getGender()) {
@@ -44,7 +44,7 @@ public class MemberDetailCommand implements Command {
       out.printf("취미: %s\n", member.getHobby());
       out.printf("성격: %d\n", member.getPersonal());
       out.printf("MBTI: %s\n", member.getMbti());
-      out.printf("등록일: %s\n\n", member.getRegisteredDate());
+      out.printf("등록일: %s\n", member.getRegisteredDate());
       out.printf("♥ %s님의 연락처가 궁금하신가요?\n♥ 프리미엄 서비스에 가입하세요!\n\n", member.getName());
 
     } catch (Exception e) {

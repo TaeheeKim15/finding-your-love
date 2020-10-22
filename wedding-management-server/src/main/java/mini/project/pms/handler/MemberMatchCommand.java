@@ -47,23 +47,20 @@ public class MemberMatchCommand implements Command {
         }
       }
 
-      out.printf("%s 이성분들은 아래와 같습니다.\n",personalBoard(personalNo));
-      int count = 0;
+      out.printf("♥ %s 이성분들은 아래와 같습니다.\n",personalBoard(personalNo));
       while (iterator.hasNext()) {
         Member member = iterator.next();
         if (member.getGender() != genderNo && member.getPersonal() == personalNo) {
-          ++count;
-          out.printf("<< %d번 회원님 >>\n"
-              + "이름 : %s\n"
+          out.println("---------------------------");
+          out.printf("<< %s 회원님 >>\n"
               + "나이 : %d\n"
               + "MBTI : %s\n"
               + "%s 를(을) 즐기는 회원\n",
-              count,
               member.getName(),
               member.getAge(),
               member.getMbti(),
               member.getHobby());
-          out.println("---------------");
+          out.println("---------------------------");
         } else {
           continue;
         }

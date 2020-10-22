@@ -1,1 +1,1 @@
-[]
+[{"id":"kim","password":"123","name":"kim","gender":1,"age":123,"tel":"123","hobby":"123","personal":1,"mbti":"123","registeredDate":"10월 22, 2020"},{"id":"lee","password":"123","name":"lee","gender":2,"age":123,"tel":"123","hobby":"123","personal":1,"mbti":"123","registeredDate":"10월 22, 2020"},{"id":"park","password":"123","name":"park","gender":2,"age":66,"tel":"123","hobby":"123","personal":8,"mbti":"ENTJ","registeredDate":"10월 22, 2020"}]
