@@ -42,7 +42,7 @@ public class MemberDetailCommand implements Command {
       out.printf("성별: %s\n", genderLabel);
       out.printf("나이: %s\n", member.getAge());
       out.printf("취미: %s\n", member.getHobby());
-      out.printf("성격: %d\n", member.getPersonal());
+      out.printf("성격: %s 성격\n", personalBoard(member.getPersonal()));
       out.printf("등록일: %s\n", member.getRegisteredDate());
       out.printf("♥ %s님의 연락처가 궁금하신가요?\n♥ 프리미엄 서비스에 가입하세요!\n\n", member.getName());
 
@@ -60,4 +60,21 @@ public class MemberDetailCommand implements Command {
     }
     return null;
   }
+
+  private String personalBoard(int personalNo) {
+    String a = null;
+    switch(personalNo) {
+      case 1: return a = "다정한";
+      case 2: return a = "자신감 넘치는";
+      case 3: return a = "성실한";
+      case 4: return a = "꼼꼼한";
+      case 5: return a = "외향적인";
+      case 6: return a = "내성적인";
+      case 7: return a = "자상한";
+      case 8: return a = "끈기있는";
+      case 9: return a = "낙천적인";
+    }
+    return a;
+  }
+
 }
