@@ -29,6 +29,8 @@ public class FemaleListCommand implements Command {
             member.getName(),
             member.getAge(),
             member.getHobby());
+      } else {
+        break;
       }
     }
   }
