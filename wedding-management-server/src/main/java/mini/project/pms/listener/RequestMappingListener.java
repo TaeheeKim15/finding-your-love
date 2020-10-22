@@ -17,6 +17,7 @@ import mini.project.pms.handler.MemberAddCommand;
 import mini.project.pms.handler.MemberDeleteCommand;
 import mini.project.pms.handler.MemberDetailCommand;
 import mini.project.pms.handler.MemberListCommand;
+import mini.project.pms.handler.MemberMatchCommand;
 
 // 클라이언트 요청을 처리할 커맨드 객체를 준비한다.
 public class RequestMappingListener implements ApplicationContextListener {
@@ -37,6 +38,7 @@ public class RequestMappingListener implements ApplicationContextListener {
     context.put("/board/delete", new BoardDeleteCommand(boardList));
 
     MemberListCommand memberListCommand = new MemberListCommand(memberList);
+    context.put("/member/match", new MemberMatchCommand(memberList));
     context.put("/femaleMember/list", new FemaleListCommand(memberList));
     context.put("/maleMember/list", new MaleListCommand(memberList));
     context.put("/member/add", new MemberAddCommand(memberList));
