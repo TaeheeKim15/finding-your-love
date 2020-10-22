@@ -88,7 +88,7 @@ public class ClientApp {
   private static String commandBoard(int num) {
     String command = null;
     switch(num) {
-      case 0: return command = "stop"; 
+      case 0: return command = "quit"; 
       case 1: return command = "/member/add"; 
       case 2: return command ="/member/detail";
       case 3: return command ="/member/delete"; 
