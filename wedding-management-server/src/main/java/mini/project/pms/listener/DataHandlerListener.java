@@ -6,7 +6,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.LinkedList;
@@ -14,31 +13,22 @@ import java.util.List;
 import java.util.Map;
 import com.google.gson.Gson;
 import mini.project.context.ApplicationContextListener;
-import mini.project.pms.domain.Board;
 import mini.project.pms.domain.Member;
 
 public class DataHandlerListener implements ApplicationContextListener {
-
-  List<Board> boardList = new ArrayList<>();
-  File boardFile = new File("./board.json"); // 게시글을 저장할 파일 정보
 
   List<Member> memberList = new LinkedList<>();
   File memberFile = new File("./member.json"); // 회원을 저장할 파일 정보
 
   @Override
   public void contextInitialized(Map<String,Object> context) {
-    // 파일에서 데이터 로딩
-    loadData(boardList, boardFile, Board[].class);
     loadData(memberList, memberFile, Member[].class);
 
-    // 발행자(App 객체)가 사용할 수 있도록 맵 객체에 담아서 공유한다.
-    context.put("boardList", boardList);
     context.put("memberList", memberList);
   }
 
   @Override
   public void contextDestroyed(Map<String,Object> context) {
-    saveData(boardList, boardFile);
     saveData(memberList, memberFile);
   }
 

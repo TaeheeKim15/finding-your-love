@@ -3,13 +3,7 @@ package mini.project.pms.listener;
 import java.util.List;
 import java.util.Map;
 import mini.project.context.ApplicationContextListener;
-import mini.project.pms.domain.Board;
 import mini.project.pms.domain.Member;
-import mini.project.pms.handler.BoardAddCommand;
-import mini.project.pms.handler.BoardDeleteCommand;
-import mini.project.pms.handler.BoardDetailCommand;
-import mini.project.pms.handler.BoardListCommand;
-import mini.project.pms.handler.BoardUpdateCommand;
 import mini.project.pms.handler.FemaleListCommand;
 import mini.project.pms.handler.HelloCommand;
 import mini.project.pms.handler.MaleListCommand;
@@ -26,16 +20,9 @@ public class RequestMappingListener implements ApplicationContextListener {
   @Override
   public void contextInitialized(Map<String,Object> context) {
     // 옵저버가 작업한 결과를 맵에서 꺼낸다.
-    List<Board> boardList = (List<Board>) context.get("boardList");
     List<Member> memberList = (List<Member>) context.get("memberList");
 
     context.put("/hello", new HelloCommand());
-
-    context.put("/board/add", new BoardAddCommand(boardList));
-    context.put("/board/list", new BoardListCommand(boardList));
-    context.put("/board/detail", new BoardDetailCommand(boardList));
-    context.put("/board/update", new BoardUpdateCommand(boardList));
-    context.put("/board/delete", new BoardDeleteCommand(boardList));
 
     MemberListCommand memberListCommand = new MemberListCommand(memberList);
     context.put("/member/match", new MemberMatchCommand(memberList));
