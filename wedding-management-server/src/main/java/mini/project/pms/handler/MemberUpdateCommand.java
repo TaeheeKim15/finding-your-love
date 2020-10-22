@@ -17,12 +17,12 @@ public class MemberUpdateCommand implements Command {
   @Override
   public void execute(PrintWriter out, BufferedReader in) {
     try {
-      out.println("[회원 변경]");
-      int no = Prompt.inputInt("번호? ", out, in);
-      Member member = findByNo(no);
+      out.println("[회원 정보 변경]");
+      String id = Prompt.inputString("아이디? ", out, in);
+      Member member = findById(id);
 
       if (member == null) {
-        out.println("해당 번호의 회원이 없습니다.");
+        out.println("해당 회원이 없습니다.");
         return;
       }
 
@@ -48,10 +48,10 @@ public class MemberUpdateCommand implements Command {
     }
   }
 
-  private Member findByNo(int no) {
+  private Member findById(String id) {
     for (int i = 0; i < memberList.size(); i++) {
       Member member = memberList.get(i);
-      if (member.getNo() == no) {
+      if (member.getId() == id) {
         return member;
       }
     }
