@@ -45,7 +45,7 @@ public class MemberDetailCommand implements Command {
       out.printf("성격: %d\n", member.getPersonal());
       out.printf("MBTI: %s\n", member.getMbti());
       out.printf("등록일: %s\n", member.getRegisteredDate());
-      out.printf("♥ %s님의 연락처가 궁금하신가요?\n♥프리미엄 서비스에 가입하세요!\n", member.getName());
+      out.printf("♥ %s님의 연락처가 궁금하신가요?\n♥ 프리미엄 서비스에 가입하세요!\n", member.getName());
 
     } catch (Exception e) {
       out.printf("작업 처리 중 오류 발생! - %s\n", e.getMessage());

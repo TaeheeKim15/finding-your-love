@@ -21,10 +21,23 @@ public class MemberAddCommand implements Command {
     try {
       out.println("[회원 등록]");
 
-      Member member = new Member();
+      Member member;
       out.println("★ 입력하신 정보는 변경할 수 없습니다.\n★ 신중하게 입력하시길 바랍니다.");
 
-      member.setId(Prompt.inputString("아이디? ", out, in));
+      String id;
+      while (true) {
+        id = Prompt.inputString("아이디? ", out, in);
+        member = findById(id);
+        if (member != null) {
+          out.println("입력하신 아이디는 이미 사용중입니다.");
+          out.println("다른 아이디를 입력해주세요.");
+        } else {
+          member = new Member();
+          member.setId(id);
+          break;
+        }
+      }
+
       member.setPassword(Prompt.inputString("비밀번호? ", out, in));
       member.setName(Prompt.inputString("이름? ", out, in));
 
@@ -68,10 +81,10 @@ public class MemberAddCommand implements Command {
     }
   }
 
-  private Member findById(String id) {
+  public Member findById(String id) {
     for (int i = 0; i < memberList.size(); i++) {
       Member member = memberList.get(i);
-      if (member.getId() == id) {
+      if (member.getId().equals(id)) {
         return member;
       }
     }
