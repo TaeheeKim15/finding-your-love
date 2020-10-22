@@ -11,7 +11,6 @@ public class Member {
   private String tel;
   private String hobby;
   private int personal;
-  private String mbti;
 
   public String getPassword() {
     return password;
@@ -62,12 +61,6 @@ public class Member {
   }
   public void setPersonal(int personal) {
     this.personal = personal;
-  }
-  public String getMbti() {
-    return mbti;
-  }
-  public void setMbti(String mbti) {
-    this.mbti = mbti;
   }
   public Date getRegisteredDate() {
     return registeredDate;

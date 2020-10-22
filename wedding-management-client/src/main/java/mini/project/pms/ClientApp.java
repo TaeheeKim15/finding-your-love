@@ -31,12 +31,12 @@ public class ClientApp {
 
     while (true) {
       System.out.println("\n"
-          + "----------------------------------\n"
-          + "(1) 회원 등록 (2) 회원 목록 보기 \n"
-          + "(3) 회원 상세 보기 (4) 회원 탈퇴  \n"
-          + "(5) 여성회원 조회 (6) 남성회원 조회 \n"
-          + "(7) 회원 매칭 (0) 나가기 (99) 종료\n"
-          + "----------------------------------\n");
+          + "------------------------------------------------------\n"
+          + "(1) 회원 등록       (2) 전체 회원 조회 \n"
+          + "(3) 여성회원 조회   (4) 남성회원 조회 \n"
+          + "(5) 회원 상세 보기  (6) 회원 탈퇴  \n"
+          + "(7) 회원 매칭       (0) 나가기           (99) 종료\n"
+          + "------------------------------------------------------\n");
       String input = commandBoard(Prompt.inputInt("명령> "));
 
       if (input.equalsIgnoreCase("quit"))
@@ -47,7 +47,16 @@ public class ClientApp {
       if (input.equalsIgnoreCase("stop"))
         break;
     }
-    System.out.println("안녕!");
+    System.out.println("다음에 또 만나요!");
+    System.out.println(""
+        + " _                \n"
+        + "| |               \n"
+        + "| |__  _   _  ___ \n"
+        + "| '_ \\| | | |/ _ \\\n"
+        + "| |_) | |_| |  __/\n"
+        + "|_.__/ \\__, |\\___|\n"
+        + "        __/ |     \n"
+        + "       |___/    ");
 
   }
 
@@ -103,10 +112,10 @@ public class ClientApp {
       case 0: command = "quit"; break;
       case 1: command = "/member/add"; break;
       case 2: command = "/member/list"; break;
-      case 3: command = "/member/detail"; break;
-      case 4: command = "/member/delete"; break;
-      case 5: command = "/femaleMember/list"; break;
-      case 6: command = "/maleMember/list"; break;
+      case 3: command = "/femaleMember/list"; break;
+      case 4: command = "/maleMember/list"; break;
+      case 5: command = "/member/detail"; break;
+      case 6: command = "/member/delete"; break;
       case 7: command = "/member/match"; break;
       case 99: command = "stop"; break;
       default: command = "  "; break;

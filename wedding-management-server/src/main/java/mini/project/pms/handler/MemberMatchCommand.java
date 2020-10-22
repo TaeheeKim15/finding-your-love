@@ -54,11 +54,9 @@ public class MemberMatchCommand implements Command {
           out.println("---------------------------");
           out.printf("<< %s 회원님 >>\n"
               + "나이 : %d\n"
-              + "MBTI : %s\n"
               + "%s 를(을) 즐기는 회원\n",
               member.getName(),
               member.getAge(),
-              member.getMbti(),
               member.getHobby());
           out.println("---------------------------");
         } else {

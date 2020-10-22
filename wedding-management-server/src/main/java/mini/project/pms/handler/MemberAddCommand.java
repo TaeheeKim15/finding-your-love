@@ -70,7 +70,6 @@ public class MemberAddCommand implements Command {
         }
       }
 
-      member.setMbti(Prompt.inputString("● MBTI? ", out, in));
       member.setRegisteredDate(new Date(System.currentTimeMillis()));
 
       //out.printf("%s님의 정보를 저장했습니다.", member.getName());
