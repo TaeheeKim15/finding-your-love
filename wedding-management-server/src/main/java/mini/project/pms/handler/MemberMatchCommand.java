@@ -46,11 +46,13 @@ public class MemberMatchCommand implements Command {
           out.println("다시 입력해주세요!");
         }
       }
-
+      int count = 0;
       while (iterator.hasNext()) {
         Member member = iterator.next();
         if (member.getGender() != genderNo && member.getPersonal() == personalNo) {
-          out.printf("%s, %d, %s\n",
+          ++count;
+          out.printf("%d번 회원님 : %s, %d, %s\n", 
+              count,
               member.getName(),
               member.getAge(),
               member.getHobby());
