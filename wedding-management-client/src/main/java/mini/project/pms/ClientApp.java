@@ -22,7 +22,7 @@ public class ClientApp {
     port = Integer.parseInt(args[1]);
 
     while (true) {
-      System.out.println(" (1) 회원 등록 (2) 회원 상세보기 (3) 회원 탈퇴\n"
+      System.out.println("(1) 회원 등록 (2) 회원 상세보기 (3) 회원 탈퇴\n"
           + "(4) 여성회원 조회 (5) 남성회원 조회 (6) 회원 매칭\n"
           + "(0) 나가기");
       String input = commandBoard(Prompt.inputInt("명령> "));
