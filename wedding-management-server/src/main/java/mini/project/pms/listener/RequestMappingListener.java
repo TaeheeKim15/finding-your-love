@@ -2,6 +2,7 @@ package mini.project.pms.listener;
 
 import java.util.List;
 import java.util.Map;
+
 import mini.project.context.ApplicationContextListener;
 import mini.project.pms.domain.Board;
 import mini.project.pms.domain.Member;
@@ -10,7 +11,9 @@ import mini.project.pms.handler.BoardDeleteCommand;
 import mini.project.pms.handler.BoardDetailCommand;
 import mini.project.pms.handler.BoardListCommand;
 import mini.project.pms.handler.BoardUpdateCommand;
+import mini.project.pms.handler.FemaleListCommand;
 import mini.project.pms.handler.HelloCommand;
+import mini.project.pms.handler.MaleListCommand;
 import mini.project.pms.handler.MemberAddCommand;
 import mini.project.pms.handler.MemberDeleteCommand;
 import mini.project.pms.handler.MemberDetailCommand;
@@ -33,6 +36,8 @@ public class RequestMappingListener implements ApplicationContextListener {
 		context.put("/board/delete", new BoardDeleteCommand(boardList));
 
 		MemberListCommand memberListCommand = new MemberListCommand(memberList);
+		context.put("/femaleMember/list", new FemaleListCommand(memberList));
+		context.put("/maleMember/list", new MaleListCommand(memberList));
 		context.put("/member/add", new MemberAddCommand(memberList));
 		context.put("/member/list", memberListCommand);
 		context.put("/member/detail", new MemberDetailCommand(memberList));
