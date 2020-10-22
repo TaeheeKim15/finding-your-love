@@ -22,9 +22,10 @@ public class MemberListCommand implements Command {
 
     while (iterator.hasNext()) {
       Member member = iterator.next();
-      out.printf("%s(%d세), %s을/를 즐깁니다.\n",
+      out.printf("%s님 (%d세, %s), %s을/를 즐깁니다.\n",
           member.getName(),
           member.getAge(),
+          isWoman(member.getGender()),
           member.getHobby());
     }
   }
@@ -37,6 +38,16 @@ public class MemberListCommand implements Command {
       }
     }
     return null;
+  }
+
+  public String isWoman(int gender) {
+    String a = null;
+    if (gender == 1) {
+      a = "여성";
+    } else {
+      a = "남성";
+    }
+    return a;
   }
 
 }
