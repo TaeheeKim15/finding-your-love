@@ -2,6 +2,7 @@ package mini.project.pms.handler;
 
 import java.io.BufferedReader;
 import java.io.PrintWriter;
+import java.sql.Date;
 import java.util.List;
 import mini.project.pms.domain.Member;
 import mini.project.util.Prompt;
@@ -28,6 +29,7 @@ public class MemberAddCommand implements Command {
       member.setHobby(Prompt.inputString("취미? ", out, in));
       member.setPersonal(Prompt.inputInt("성격? ", out, in));
       member.setMbti(Prompt.inputString("MBTI? ", out, in));
+      member.setRegisteredDate(new Date(System.currentTimeMillis()));
 
       memberList.add(member);
 

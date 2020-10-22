@@ -1,7 +1,7 @@
 package mini.project.pms.domain;
 
-//Member 클래스는 더이상 CsvObject를 구현할 필요가 없다.
-//
+import java.sql.Date;
+
 public class Member {
 	private String id;
 	private String name;
@@ -11,6 +11,7 @@ public class Member {
 	private String hobby;
 	private int personal;
 	private String mbti;
+	private Date registeredDate;
 
 	public String getId() {
 		return id;
@@ -60,6 +61,11 @@ public class Member {
 	public void setMbti(String mbti) {
 		this.mbti = mbti;
 	}
-
+	public Date getRegisteredDate() {
+	  return registeredDate;
+	}
+	public void setRegisteredDate(Date registeredDate) {
+	  this.registeredDate = registeredDate;
+	}
 
 }
