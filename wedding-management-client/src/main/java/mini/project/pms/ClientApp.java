@@ -21,10 +21,22 @@ public class ClientApp {
     host = args[0];
     port = Integer.parseInt(args[1]);
 
+    System.out.println("\n"
+        + "╱▔▔╲╱▔▔╲┊┊╭━━━━━━━━━━━━\n"
+        + "▏┈╭╮╭╮┈▕┊┊┃ Finding\n"
+        + "╲┈┏━━┓┈╱┊╭┫ your Love♥\n"
+        + "┊╲╰━━╯╱━━╯╰━━━━━━━━━━━━\n"
+        + "┊┊╲┈┈╱┊┊┊┊┊┊┊┊  ♥    ♥\n"
+        + "┊┊┊╲╱┊┊┊┊┊┊┊┊┊♥    ♥   ♥");
+
     while (true) {
-      System.out.println("(1) 회원 등록 (2) 회원 상세보기 (3) 회원 탈퇴\n"
-          + "(4) 여성회원 조회 (5) 남성회원 조회 (6) 회원 매칭\n"
-          + "(0) 나가기");
+      System.out.println("\n"
+          + "----------------------------------\n"
+          + "(1) 회원 등록 (2) 회원 목록 보기 \n"
+          + "(3) 회원 상세 보기 (4) 회원 탈퇴  \n"
+          + "(4) 여성회원 조회 (5) 남성회원 조회 \n"
+          + "(6) 회원 매칭 (0) 나가기\n"
+          + "----------------------------------\n");
       String input = commandBoard(Prompt.inputInt("명령> "));
       if (input.equalsIgnoreCase("quit"))
         break;
@@ -88,13 +100,14 @@ public class ClientApp {
   private static String commandBoard(int num) {
     String command = null;
     switch(num) {
-      case 0: return command = "quit"; 
-      case 1: return command = "/member/add"; 
-      case 2: return command ="/member/detail";
-      case 3: return command ="/member/delete"; 
-      case 4: return command ="/femaleMember/list";
-      case 5: return command ="/maleMember/list"; 
-      case 6: return command ="/member/match";
+      case 0: return command = "quit";
+      case 1: return command = "/member/add";
+      case 2: return command = "/member/list";
+      case 3: return command ="/member/detail";
+      case 4: return command ="/member/delete";
+      case 5: return command ="/femaleMember/list";
+      case 7: return command ="/maleMember/list";
+      case 8: return command ="/member/match";
     }
     return command;
   }
