@@ -23,11 +23,8 @@ public class MemberAddCommand implements Command {
 
       Member member = new Member();
       out.println("입력하신 정보는 변경할 수 없으니 신중하게 입력해주세요.");
-      out.println(" ");
       member.setId(Prompt.inputString("- 아이디? ", out, in));
       member.setPassword(Prompt.inputString("- 비밀번호? ", out, in));
-      out.println(" ");
-
       member.setName(Prompt.inputString("- 이름? ", out, in));
 
       int genderNo = 0;
@@ -52,7 +49,7 @@ public class MemberAddCommand implements Command {
             + "(4) 꼼꼼한 (5) 외향적인 (6) 내성적인\n"
             + "(7) 자상한 (8) 끈기있는 (9) 낙천적인\n> ", out, in);
         if (personalNo >= 0 && personalNo < 10) {
-          member.setGender(genderNo);
+          member.setGender(personalNo);
           break;
         } else {
           out.println("다시 입력해주세요!");

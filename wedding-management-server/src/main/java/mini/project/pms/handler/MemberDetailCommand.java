@@ -45,7 +45,9 @@ public class MemberDetailCommand implements Command {
       out.printf("취미: %s\n", member.getHobby());
       out.printf("MBTI: %s\n", member.getMbti());
       out.printf("등록일: %s\n", member.getRegisteredDate());
+      out.printf(" ");
       out.printf("%s님의 연락처를 알고 싶으시면 프리미엄 서비스에 가입하세요!\n", member.getName());
+      out.printf(" ");
 
     } catch (Exception e) {
       out.printf("작업 처리 중 오류 발생! - %s\n", e.getMessage());
