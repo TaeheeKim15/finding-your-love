@@ -22,7 +22,7 @@ public class MemberListCommand implements Command {
 
     while (iterator.hasNext()) {
       Member member = iterator.next();
-      out.printf("%s(%d세), %s를 즐깁니다.\n",
+      out.printf("%s(%d세), %s을/를 즐깁니다.\n",
           member.getName(),
           member.getAge(),
           member.getHobby());

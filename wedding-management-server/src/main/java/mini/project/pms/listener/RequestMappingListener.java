@@ -45,10 +45,10 @@ public class RequestMappingListener implements ApplicationContextListener {
     context.put("/member/list", memberListCommand);
     context.put("/member/detail", new MemberDetailCommand(memberList));
     context.put("/member/delete", new MemberDeleteCommand(memberList));
-
   }
 
   @Override
   public void contextDestroyed(Map<String,Object> context) {
   }
+
 }
