@@ -3,7 +3,6 @@ package mini.project.pms.handler;
 
 import java.io.BufferedReader;
 import java.io.PrintWriter;
-import java.sql.Date;
 import java.util.List;
 import mini.project.pms.domain.Member;
 import mini.project.util.Prompt;
@@ -70,9 +69,6 @@ public class MemberAddCommand implements Command {
         }
       }
 
-      member.setRegisteredDate(new Date(System.currentTimeMillis()));
-
-      //out.printf("%s님의 정보를 저장했습니다.", member.getName());
       memberList.add(member);
 
     } catch (Exception e) {

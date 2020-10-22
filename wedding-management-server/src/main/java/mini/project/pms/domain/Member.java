@@ -1,7 +1,5 @@
 package mini.project.pms.domain;
 
-import java.sql.Date;
-
 public class Member {
   private String id;
   private String password;
@@ -18,8 +16,6 @@ public class Member {
   public void setPassword(String password) {
     this.password = password;
   }
-  private Date registeredDate;
-
   public String getId() {
     return id;
   }
@@ -61,12 +57,6 @@ public class Member {
   }
   public void setPersonal(int personal) {
     this.personal = personal;
-  }
-  public Date getRegisteredDate() {
-    return registeredDate;
-  }
-  public void setRegisteredDate(Date registeredDate) {
-    this.registeredDate = registeredDate;
   }
 
 }
