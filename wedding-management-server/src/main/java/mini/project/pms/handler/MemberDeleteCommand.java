@@ -18,7 +18,7 @@ public class MemberDeleteCommand implements Command {
     try {
       out.println("-----------------------[회원 탈퇴]-----------------------");
 
-      String id = Prompt.inputString("● 탈퇴하려는 아이디를 입력하세요. > ", out, in);
+      String id = Prompt.inputString("● 탈퇴하려는 아이디를 입력하세요 > ", out, in);
       Member member = findById(id);
 
       if (member == null) {
@@ -29,11 +29,11 @@ public class MemberDeleteCommand implements Command {
       String password = member.getPassword();
       String response = Prompt.inputString("● 정말 삭제하시겠습니까?(y/N) ", out, in);
       if (!response.equalsIgnoreCase("y")) {
-        out.println("회원 탈퇴를 취소하였습니다.");
+        out.println("★ 회원 탈퇴를 취소하였습니다.");
         return;
       }
 
-      String input = Prompt.inputString("● 비밀번호를 입력하세요. >", out, in);
+      String input = Prompt.inputString("● 비밀번호를 입력하세요 >", out, in);
       if (!input.equalsIgnoreCase(password)) {
         out.println("★ 비밀번호가 일치하지 않습니다.");
         return;
