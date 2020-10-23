@@ -40,7 +40,7 @@ public class MemberDeleteCommand implements Command {
       }
 
       memberList.remove(member);
-      out.println("회원을 삭제하였습니다.");
+      out.println("회원 탈퇴가 완료되었습니다.");
       out.println("♥ Finding your love... ♥ 를 이용해주셔서 감사합니다.");
       out.println(""
           + "                               \n"
