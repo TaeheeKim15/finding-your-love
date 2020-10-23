@@ -48,16 +48,17 @@ public class ClientApp {
       if (input.equalsIgnoreCase("stop"))
         break;
     }
-    System.out.println("다음에 또 만나요!");
+    System.out.println("-----[프로그램 종료]-----");
+    System.out.println("    다음에 또 만나요!");
     System.out.println(""
-        + " _                \n"
-        + "| |               \n"
-        + "| |__  _   _  ___ \n"
-        + "| '_ \\| | | |/ _ \\\n"
-        + "| |_) | |_| |  __/\n"
-        + "|_.__/ \\__, |\\___|\n"
-        + "        __/ |     \n"
-        + "       |___/    ");
+        + "     _                \n"
+        + "    | |               \n"
+        + "    | |__  _   _  ___ \n"
+        + "    | '_ \\| | | |/ _ \\\n"
+        + "    | |_) | |_| |  __/\n"
+        + "    |_.__/ \\__, |\\___|\n"
+        + "            __/ |     \n"
+        + "           |___/    ");
 
   }
 
