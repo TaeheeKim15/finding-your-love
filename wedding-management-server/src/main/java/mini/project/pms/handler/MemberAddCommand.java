@@ -99,7 +99,7 @@ public class MemberAddCommand implements Command {
           continue;
         }
         while (isStringDouble(hobby) == true) {
-          hobby = Prompt.inputString("숫자를 입력하실 수 없습니다. 재입력해주세요.\n"
+          hobby = Prompt.inputString("숫자를 입력하실 수 없습니다. 다시 입력해주세요.\n"
               + "● 취미? ", out, in);
         }
         member.setHobby(hobby);
