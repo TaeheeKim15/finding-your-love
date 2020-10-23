@@ -23,7 +23,7 @@ public class FemaleListCommand implements Command {
     while (iterator.hasNext()) {
       Member member = iterator.next();
       if (member.getGender() == 1) {
-        out.printf("%s(%d세), %s을/를 즐깁니다.\n",
+        out.printf("%s님(%d세), %s을/를 즐깁니다.\n",
             member.getName(),
             member.getAge(),
             member.getHobby());
