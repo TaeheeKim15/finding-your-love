@@ -16,18 +16,18 @@ public class MemberDeleteCommand implements Command {
   @Override
   public void execute(PrintWriter out, BufferedReader in) {
     try {
-      out.println("------------[회원 탈퇴]------------");
+      out.println("-----------------------[회원 탈퇴]-----------------------");
 
       String id = Prompt.inputString("● 탈퇴하려는 아이디를 입력하세요. > ", out, in);
       Member member = findById(id);
 
       if (member == null) {
-        out.println("입력하신 아이디의 회원을 찾을 수 없습니다.");
+        out.println("★ 입력하신 아이디의 회원을 찾을 수 없습니다.");
         return;
       }
 
       String password = member.getPassword();
-      String response = Prompt.inputString("정말 삭제하시겠습니까?(y/N) ", out, in);
+      String response = Prompt.inputString("● 정말 삭제하시겠습니까?(y/N) ", out, in);
       if (!response.equalsIgnoreCase("y")) {
         out.println("회원 탈퇴를 취소하였습니다.");
         return;
@@ -35,12 +35,12 @@ public class MemberDeleteCommand implements Command {
 
       String input = Prompt.inputString("● 비밀번호를 입력하세요. >", out, in);
       if (!input.equalsIgnoreCase(password)) {
-        out.println("비밀번호가 일치하지 않습니다.");
+        out.println("★ 비밀번호가 일치하지 않습니다.");
         return;
       }
 
       memberList.remove(member);
-      out.println("회원 탈퇴가 완료되었습니다.");
+      out.println("★ 회원 탈퇴가 완료되었습니다.");
       out.println("♥ Finding your love... ♥ 를 이용해주셔서 감사합니다.");
       out.println(""
           + "                               \n"
@@ -55,6 +55,7 @@ public class MemberDeleteCommand implements Command {
           + "        ';;;@/   /@@;;;' See you later!\n"
           + "          ';/   /;@;;'   Bye.....♥\n"
           + "                \\;'\n");
+      out.println("----------------------------------------------------------");
 
     } catch (Exception e) {
       out.printf("작업 처리 중 오류 발생! - %s\n", e.getMessage());

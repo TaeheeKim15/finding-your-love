@@ -16,7 +16,7 @@ public class FemaleListCommand implements Command {
 
   @Override
   public void execute(PrintWriter out, BufferedReader in) {
-    out.println("---------[여성 회원 목록]---------");
+    out.println("---------------------[여성 회원 목록]---------------------");
 
     Iterator<Member> iterator = memberList.iterator();
 
@@ -31,6 +31,7 @@ public class FemaleListCommand implements Command {
         continue;
       }
     }
+    out.println("----------------------------------------------------------");
   }
 
 }

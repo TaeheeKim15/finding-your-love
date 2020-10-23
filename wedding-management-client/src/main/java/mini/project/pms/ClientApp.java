@@ -109,9 +109,10 @@ public class ClientApp {
       case 0: command = "quit"; break;
       case 1: command = "/member/add"; break;
       case 2: command = memberListCommand(
-          Prompt.inputInt("---------------------------------------------------------------\n"
-              + "(1) 전체 회원 조회    (2) 여성 회원 조회   (3) 남성 회원 조회\n"
-              + "---------------------------------------------------------------\n번호 선택> ")); break;
+          Prompt.inputInt("----------------------------------------------------------\n"
+              + "   (1) 전체 회원     (2) 여성 회원     (3) 남성 회원\n"
+              + "----------------------------------------------------------\n"
+              + "조회하려는 회원 유형 선택 (예 : 2) > ")); break;
       case 3: command = "/member/detail"; break;
       case 4: command = "/member/match"; break;
       case 5: command = "/member/delete"; break;

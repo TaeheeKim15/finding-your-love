@@ -16,7 +16,7 @@ public class MemberListCommand implements Command {
 
   @Override
   public void execute(PrintWriter out, BufferedReader in) {
-    out.println("------------[전체 회원 목록]------------");
+    out.println("---------------------[전체 회원 목록]---------------------");
 
     Iterator<Member> iterator = memberList.iterator();
 
@@ -28,6 +28,7 @@ public class MemberListCommand implements Command {
           isWoman(member.getGender()),
           member.getHobby());
     }
+    out.println("----------------------------------------------------------");
   }
 
   public Member findByName(String name) {
