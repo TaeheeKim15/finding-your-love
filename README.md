@@ -21,9 +21,10 @@
 
 
 ## 구현 방식
-- 서버와 클라이언트 App을 각각 만든다.
+- 서버와 클라이언트 App을 각각 만든다. (ServerApp & ClientApp)
 - 서버와 클라이언트는 stateless 방식으로 통신한다.
-- CRUD를 구현한다.
+- Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 구현한다.
+- 입력된 정보는 json형식의 파일로 저장하고 읽어들인다.
 
 
 ## 기능
