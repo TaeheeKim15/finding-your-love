@@ -52,8 +52,8 @@ public class MemberDeleteCommand implements Command {
           + "   ;;;@@';;, \\   \\  ,;;'@@;;;\n"
           + "    ';;;@@';;,\\   \\;;'@@;;;'\n"
           + "      ';;;@@';/   /'@@;;;'\n"
-          + "        ';;;@/   /@@;;;' see you later!\n"
-          + "          ';/   /;@;;'   bye.....♥\n"
+          + "        ';;;@/   /@@;;;' See you later!\n"
+          + "          ';/   /;@;;'   Bye.....♥\n"
           + "                \\;'\n");
 
     } catch (Exception e) {
