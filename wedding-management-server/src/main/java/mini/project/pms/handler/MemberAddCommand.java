@@ -26,6 +26,9 @@ public class MemberAddCommand implements Command {
       String id;
       while (true) {
         id = Prompt.inputString("● 아이디? ", out, in);
+        if (!stringValidCheck(out, id)) {
+          continue;
+        }
         member = findById(id);
         if (member != null) {
           out.println("입력하신 아이디는 이미 사용중입니다.");
@@ -37,8 +40,25 @@ public class MemberAddCommand implements Command {
         }
       }
 
-      member.setPassword(Prompt.inputString("● 비밀번호? ", out, in));
-      member.setName(Prompt.inputString("● 이름? ", out, in));
+      String password;
+      while (true) {
+        password = Prompt.inputString("● 비밀번호? ", out, in);
+        if (!stringValidCheck(out, password)) {
+          continue;
+        }
+        member.setPassword(password);
+        break;
+      }
+
+      String name;
+      while (true) {
+        name = Prompt.inputString("● 이름? ", out, in);
+        if (!nullCheck(out, name)) {
+          continue;
+        }
+        member.setName(name);
+        break;
+      }
 
       int genderNo = 0;
       while (true) {
@@ -51,8 +71,26 @@ public class MemberAddCommand implements Command {
         }
       }
 
-      member.setAge(Prompt.inputInt("● 나이? ", out, in));
-      member.setTel(Prompt.inputString("● 전화번호? ", out, in));
+      int age;
+      while (true) {
+        age = Prompt.inputInt("● 나이? ", out, in);
+        if (!nullCheck(out, age)) {
+          continue;
+        }
+        member.setAge(age);
+        break;
+      }
+
+      String tel;
+      while (true) {
+        tel = Prompt.inputString("● 전화번호? ", out, in);
+        if (!nullCheck(out, tel)) {
+          continue;
+        }
+        member.setTel(tel);
+        break;
+      }
+
       member.setHobby(Prompt.inputString("● 취미? ", out, in));
 
       int personalNo = 0;
@@ -84,5 +122,34 @@ public class MemberAddCommand implements Command {
       }
     }
     return null;
+  }
+
+  public boolean nullCheck(PrintWriter out, String input) {
+    boolean validity = true;
+    if (input.length() == 0) {
+      out.println("입력된 데이터가 없습니다.");
+      validity = false;
+    }
+    return validity;
+  }
+
+  public boolean nullCheck(PrintWriter out, int input) {
+    boolean validity = true;
+    if (input == 0) {
+      out.println("입력된 데이터가 없습니다.");
+      validity = false;
+    }
+    return validity;
+  }
+
+  public boolean stringValidCheck(PrintWriter out, String input) {
+    boolean validity = true;
+    nullCheck(out, input);
+    if (input.length() < 3 || input.length() > 16) {
+      out.println("입력 조건을 확인하시길 바랍니다.");
+      out.println("(영문과 숫자 조합 3자 이상, 15자 이하)");
+      validity = false;
+    }
+    return validity;
   }
 }
