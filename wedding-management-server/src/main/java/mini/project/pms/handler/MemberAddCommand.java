@@ -157,7 +157,7 @@ public class MemberAddCommand implements Command {
 
   public boolean stringValidCheck(PrintWriter out, String input) {
     boolean validity = true;
-    nullCheck(out, input);
+    validity = nullCheck(out, input);
     if (input.length() < 3 || input.length() > 16) {
       out.println("입력 조건을 확인하시길 바랍니다.");
       out.println("(영문과 숫자 조합 3자 이상, 15자 이하)");
