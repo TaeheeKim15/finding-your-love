@@ -1,21 +1,26 @@
 # mini-project
 비트캠프 2차 미니 프로젝트 
 
+
 ## 프로젝트 기간
 - 준비: 2020년 10월 22일
 - 발표: 2020년 10월 23일
 
+
 ## 주제
 - 결혼정보회사 회원 관리 시스템
+
 
 ## 목적
 - 서버와 클라이언트 App을 각각 만든다.
 - 서버와 클라이언트는 stateless 방식으로 통신한다.
 - CRUD를 구현한다.
 
+
 ## 참여자
 - 김태희: https://github.com/TaeheeKim15
 - 유지연: https://github.com/jiyounyou
+
 
 ## 기능
 ### 회원 등록
@@ -52,6 +57,7 @@
 ### 디폴트 회원 리스트
 - 아래 json 형식의 데이터를 사용 (여성 회원 9명, 남성 회원 7명)
 [{"id":"kimth","password":"1111","name":"김태희","gender":1,"age":30,"tel":"010-1111-1111","hobby":"피규어 수집","personal":1},{"id":"youjy","password":"1111","name":"유지연","gender":1,"age":33,"tel":"010-2222-2222","hobby":"맛집 탐방","personal":2},{"id":"eomjh","password":"1111","name":"엄정화","gender":1,"age":25,"tel":"010-3333-3333","hobby":"퍼즐맞추기","personal":3},{"id":"jeonjh","password":"1111","name":"전지현","gender":1,"age":40,"tel":"010-4444-4444","hobby":"돈까스먹기","personal":4},{"id":"junghh","password":"1111","name":"정현희","gender":1,"age":34,"tel":"010-5555-5555","hobby":"요리","personal":5},{"id":"iu","password":"1111","name":"아이유","gender":1,"age":24,"tel":"010-6666-6666","hobby":"불우이웃돕기","personal":6},{"id":"baedn","password":"1111","name":"배두나","gender":1,"age":37,"tel":"010-7777-7777","hobby":"범인검거","personal":7},{"id":"jessica","password":"1111","name":"제시카","gender":1,"age":37,"tel":"010-8888-8888","hobby":"음주","personal":8},{"id":"leehr","password":"1111","name":"이효리","gender":1,"age":40,"tel":"010-9999-9999","hobby":"댄스파티","personal":9},{"id":"mapodaegyo","password":"2222","name":"곽철용","gender":2,"age":56,"tel":"010-7465-8997","hobby":"화투","personal":1},{"id":"dooli","password":"2222","name":"둘리","gender":2,"age":156,"tel":"010-5641-8907","hobby":"초능력","personal":2},{"id":"bit84","password":"2222","name":"김기안","gender":2,"age":45,"tel":"010-7156-5913","hobby":"그림그리기","personal":3},{"id":"ssal","password":"2222","name":"최농부","gender":2,"age":35,"tel":"010-3613-1504","hobby":"벌초","personal":4},{"id":"bjkim","password":"2222","name":"중도서관","gender":2,"age":28,"tel":"010-9623-1595","hobby":"게임","personal":5},{"id":"stealer","password":"2222","name":"도둑임","gender":2,"age":36,"tel":"010-9643-0388","hobby":"소매치기","personal":6},{"id":"gag","password":"2222","name":"박명수","gender":2,"age":47,"tel":"010-7460-7797","hobby":"만담","personal":7}]
+
 
 ## 실행 화면 예시
 ### 클라이언트 접속시 노출 화면
@@ -253,6 +259,7 @@ y
         __/ |     
        |___/    
 </pre>
+
 
 ## 사용한 Ascii Art
 ### 접속 화면
