@@ -176,15 +176,3 @@ public class MemberAddCommand implements Command {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
