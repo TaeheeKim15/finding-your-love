@@ -7,19 +7,23 @@
 - 발표: 2020년 10월 23일
 
 
+## 참여자
+- 김태희: https://github.com/TaeheeKim15
+- 유지연: https://github.com/jiyounyou
+
+
 ## 주제
 - 결혼정보회사 회원 관리 시스템
 
 
-## 목적
+## 프로그램 사용 대상
+- 결혼을 꿈꾸는 20 - 40대 남성과 여성
+
+
+## 구현 방식
 - 서버와 클라이언트 App을 각각 만든다.
 - 서버와 클라이언트는 stateless 방식으로 통신한다.
 - CRUD를 구현한다.
-
-
-## 참여자
-- 김태희: https://github.com/TaeheeKim15
-- 유지연: https://github.com/jiyounyou
 
 
 ## 기능
