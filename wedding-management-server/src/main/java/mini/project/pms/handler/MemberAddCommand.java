@@ -91,7 +91,15 @@ public class MemberAddCommand implements Command {
         break;
       }
 
-      member.setHobby(Prompt.inputString("● 취미? ", out, in));
+      String hobby = Prompt.inputString("● 취미? ", out, in);
+
+      while (isStringDouble(hobby) == true) {
+
+        hobby = Prompt.inputString("숫자를 입력하실 수 없습니다. 재입력해주세요.\n"
+            + "● 취미? ", out, in);
+      }
+
+      member.setHobby(hobby);
 
       int personalNo = 0;
       while (true) {
@@ -152,4 +160,26 @@ public class MemberAddCommand implements Command {
     }
     return validity;
   }
+
+  public static boolean isStringDouble(String hobby) {
+    try {
+      Double.parseDouble(hobby);
+      return true;
+    } catch (NumberFormatException e) {
+      return false;
+    }
+  }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
