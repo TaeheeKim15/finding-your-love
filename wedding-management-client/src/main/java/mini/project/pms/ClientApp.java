@@ -36,8 +36,8 @@ public class ClientApp {
           + "------------------------------------------------------\n"
           + "(1) 회원 등록       (2) 전체 회원 조회 \n"
           + "(3) 여성회원 조회   (4) 남성회원 조회 \n"
-          + "(5) 회원 상세 보기  (6) 회원 탈퇴  \n"
-          + "(7) 회원 매칭       (0) 나가기           (99) 종료\n"
+          + "(5) 회원 상세 보기  (6) 회원 매칭  \n"
+          + "(7) 회원 탈퇴       (0) 나가기           (99) 종료\n"
           + "------------------------------------------------------\n");
       String input = commandBoard(Prompt.inputInt("명령> "));
 
@@ -117,8 +117,8 @@ public class ClientApp {
       case 3: command = "/femaleMember/list"; break;
       case 4: command = "/maleMember/list"; break;
       case 5: command = "/member/detail"; break;
-      case 6: command = "/member/delete"; break;
-      case 7: command = "/member/match"; break;
+      case 6: command = "/member/match"; break;
+      case 7: command = "/member/delete"; break;
       case 99: command = "stop"; break;
       default: command = "  "; break;
     }
