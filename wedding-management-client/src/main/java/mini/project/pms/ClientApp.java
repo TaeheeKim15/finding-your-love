@@ -63,7 +63,6 @@ public class ClientApp {
   }
 
   private static void request(String message) {
-    // 클라이언트가 서버에 stop 명령을 보내면 다음 변수를 true로 변경한다.
     boolean stop = false;
 
     try (Socket socket = new Socket(host, port);
@@ -83,12 +82,8 @@ public class ClientApp {
     }
 
     if (stop) {
-      // 서버를 멈추기 위해 그냥 접속했다가 끊는다.
       try (Socket socket = new Socket(host, port)) {
-        // 아무것도 안한다.
-        // 서버가 stop 할 기회를 주기 위함이다.
       } catch (Exception e) {
-        // 아무것도 안한다.
       }
     }
   }
@@ -99,9 +94,8 @@ public class ClientApp {
       if (response.length() == 0) {
         break;
       } else if (response.equals("!{}!")) {
-        // 사용자로부터 값을 입력을 받아서 서버에 보낸다.
         out.println(Prompt.inputString(""));
-        out.flush(); // 주의! 출력하면 버퍼에 쌓인다. 서버로 보내고 싶다면 flush()를 호출하라!
+        out.flush();
       } else {
         System.out.println(response);
       }
