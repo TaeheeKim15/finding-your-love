@@ -25,21 +25,20 @@ public class ClientApp {
         + "            ♥ Finding your love... ♥\n"
         + "            ╱▔▔╲╱▔▔╲┊┊╭━━━━━━━━━━━━\n"
         + "            ▏┈╭╮╭╮┈▕┊┊┃ Finding\n"
-        + "            ╲┈┏━━┓┈╱┊╭┫ your Love♥\n"
+        + "            ╲┈┏━━┓┈╱┊╭┫ your love♥\n"
         + "            ┊╲╰━━╯╱━━╯╰━━━━━━━━━━━━\n"
         + "            ┊┊╲┈┈╱┊┊┊┊┊┊┊┊  ♥    ♥\n"
         + "            ┊┊┊╲╱┊┊┊┊┊┊┊┊┊♥    ♥   ♥");
 
     while (true) {
       System.out.println("\n"
-          + "        ♥ 원하는 번호를 입력하세요! ♥  (예: 1)\n"
+          + "               ♥ 원하는 기능을 선택하세요! ♥\n"
           + "------------------------------------------------------\n"
-          + "(1) 회원 등록       (2) 전체 회원 조회 \n"
-          + "(3) 여성회원 조회   (4) 남성회원 조회 \n"
-          + "(5) 회원 상세 보기  (6) 회원 매칭  \n"
-          + "(7) 회원 탈퇴       (0) 나가기           (99) 종료\n"
+          + "(1) 회원 등록       (2) 회원 조회 \n"
+          + "(3) 회원 상세 보기  (4) 회원 매칭  \n"
+          + "(5) 회원 탈퇴       (0) 나가기           (99) 종료\n"
           + "------------------------------------------------------\n");
-      String input = commandBoard(Prompt.inputInt("명령> "));
+      String input = commandBoard(Prompt.inputInt("번호 선택(예: 2) > "));
 
       if (input.equalsIgnoreCase("quit"))
         break;
@@ -107,13 +106,26 @@ public class ClientApp {
     switch(num) {
       case 0: command = "quit"; break;
       case 1: command = "/member/add"; break;
-      case 2: command = "/member/list"; break;
-      case 3: command = "/femaleMember/list"; break;
-      case 4: command = "/maleMember/list"; break;
-      case 5: command = "/member/detail"; break;
-      case 6: command = "/member/match"; break;
-      case 7: command = "/member/delete"; break;
+      case 2: command = memberListCommand(
+          Prompt.inputInt("-----------------------------------------------------------\n"
+              + "(1) 전체 회원 조회 (2) 여성 회원 조회 (3) 남성 회원 조회\n"
+              + "-----------------------------------------------------------\n번호 선택> ")); break;
+      case 3: command = "/member/detail"; break;
+      case 4: command = "/member/match"; break;
+      case 5: command = "/member/delete"; break;
       case 99: command = "stop"; break;
+      default: command = "  "; break;
+    }
+    return command;
+  }
+
+  private static String memberListCommand(int num) {
+    String command = null;
+    switch(num) {
+      case 1: command = "/member/list"; break;
+      case 2: command = "/femaleMember/list"; break;
+      case 3: command = "/maleMember/list"; break;
+      case 0: command = "quit"; break;
       default: command = "  "; break;
     }
     return command;
