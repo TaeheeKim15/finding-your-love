@@ -18,7 +18,7 @@ public class MemberAddCommand implements Command {
   @Override
   public void execute(PrintWriter out, BufferedReader in) {
     try {
-      out.println("[회원 등록]");
+      out.println("[신규 회원 등록]");
 
       Member member;
       out.println("★ 입력하신 정보는 변경할 수 없습니다.\n★ 신중하게 입력하시길 바랍니다.");

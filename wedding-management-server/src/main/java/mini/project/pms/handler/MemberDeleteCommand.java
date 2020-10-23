@@ -29,7 +29,7 @@ public class MemberDeleteCommand implements Command {
       String password = member.getPassword();
       String response = Prompt.inputString("정말 삭제하시겠습니까?(y/N) ", out, in);
       if (!response.equalsIgnoreCase("y")) {
-        out.println("회원 삭제를 취소하였습니다.");
+        out.println("회원 탈퇴를 취소하였습니다.");
         return;
       }
 
