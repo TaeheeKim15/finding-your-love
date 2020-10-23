@@ -16,7 +16,7 @@ public class MaleListCommand implements Command {
 
   @Override
   public void execute(PrintWriter out, BufferedReader in) {
-    out.println("[남성 회원 목록]");
+    out.println("---------[남성 회원 목록]---------");
 
     Iterator<Member> iterator = memberList.iterator();
 

@@ -19,7 +19,7 @@ public class MemberMatchCommand implements Command {
   public void execute(PrintWriter out, BufferedReader in) {
     int personalNo = 0;
 
-    out.println("[회원님 맞춤 이성 목록]");
+    out.println("------[회원님 맞춤 이성 목록]------");
 
     Iterator<Member> iterator = memberList.iterator();
 

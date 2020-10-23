@@ -17,8 +17,8 @@ public class MemberDetailCommand implements Command {
   @Override
   public void execute(PrintWriter out, BufferedReader in) {
     try {
-      out.println("[회원 상세보기]");
-      String name = Prompt.inputString("이름? ", out, in);
+      out.println("----------[회원 상세보기]----------");
+      String name = Prompt.inputString("● 이름? ", out, in);
       Member member = findByName(name);
 
       if (member == null) {
